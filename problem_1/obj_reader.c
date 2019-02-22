@@ -3,7 +3,7 @@
 #include <errno.h>
 #include <ctype.h>
 
-#include "reader.h"
+#include "obj_reader.h"
 
 #define ADDRESS struct reader* p = (struct reader*)( t + 1)
 

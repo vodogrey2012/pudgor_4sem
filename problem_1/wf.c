@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "reader.h"
+#include "obj_reader.h"
 #include "obj_dict.h"
 
 int main(int argc , char* argv[])
