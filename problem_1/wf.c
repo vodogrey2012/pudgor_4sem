@@ -6,7 +6,6 @@
 
 int main(int argc , char* argv[])
 {
-    int ret;
     struct dictionary_fn* p_dict = dictionary_create();
     struct reader_fn* p_read;
     char* word = (char*)calloc( 100 , sizeof( char));
