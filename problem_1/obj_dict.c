@@ -7,7 +7,7 @@
 #define ADDRESS struct word* p = ( struct word*)( t + 1)
 
 
-struct word
+static struct word
 {
     char* word;
     unsigned int index;
@@ -15,7 +15,7 @@ struct word
 };
 
 
-void dictionary_addword( struct dictionary_fn* t , const char* wr)
+static void dictionary_addword( struct dictionary_fn* t , const char* wr)
 {
     ADDRESS;
 
@@ -43,7 +43,7 @@ void dictionary_addword( struct dictionary_fn* t , const char* wr)
 }
 
 
-void dictionary_print( struct dictionary_fn* t)
+static void dictionary_print( struct dictionary_fn* t)
 {
     ADDRESS;
 
@@ -60,7 +60,7 @@ void dictionary_print( struct dictionary_fn* t)
 }
 
 
-void word_destroy( struct word* word)
+static void word_destroy( struct word* word)
 {
     if( word->next_word != 0)
         word_destroy( word->next_word);
@@ -75,7 +75,7 @@ void word_destroy( struct word* word)
 }
 
 
-void dictionary_destroy( struct dictionary_fn* t)
+static void dictionary_destroy( struct dictionary_fn* t)
 {
     ADDRESS;
     word_destroy( p);

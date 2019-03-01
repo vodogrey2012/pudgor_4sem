@@ -11,6 +11,7 @@ struct dictionary_fn
 
 
 struct dictionary_fn* dictionary_create();
+struct dictionary_fn* dictionary_create_tree();
 
 
 
