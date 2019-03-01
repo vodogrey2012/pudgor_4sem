@@ -1,5 +1,5 @@
-#ifndef OBJ_READER
-#define OBJ_READER
+#ifndef READER
+#define READER
 
 struct reader_fn* reader_create();
 struct reader_fn

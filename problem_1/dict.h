@@ -1,5 +1,5 @@
-#ifndef OBJ_DICT
-#define OBJ_DICT
+#ifndef DICT
+#define DICT
 
 
 struct dictionary_fn

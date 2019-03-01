@@ -1,7 +1,7 @@
 PROG = wf
 PROGT = wf_tree
-HDR = obj_dict.h obj_reader.h
-OBJ = obj_dict.o obj_dict_tree.o obj_reader.o
+HDR = dict.h reader.h
+OBJ = dict.o dict_tree.o reader.o
 MAIN = wf.c
 
 CFLAGS += -Wall -g

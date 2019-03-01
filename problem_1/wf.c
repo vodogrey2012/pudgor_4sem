@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "obj_reader.h"
-#include "obj_dict.h"
+#include "reader.h"
+#include "dict.h"
 
 int main(int argc , char* argv[])
 {

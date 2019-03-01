@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "obj_dict.h"
+#include "dict.h"
 
 #define ADDRESS struct node* p = ( struct node*)( t + 1)
 
