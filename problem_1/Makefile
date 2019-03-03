@@ -5,12 +5,11 @@ HDR = dict.h reader.h
 OBJ = dict.o dict_tree.o reader.o
 MAIN = wf.c
 GMAIN = dict_gtest.cpp
-GOBJ_TREE = dict_tree.o dict_gtest.o
+GOBJ = dict_tree.o dict.o dict_gtest.o
 
-GMAIN = d
+GMAIN = dict_gtest.cpp
 GTEST_DIR = /home/yauheni/programs/googletest/googletest
 GTEST_LIB_DIR = /home/yauheni/programs/googletest/gtest/lib
-USER_DIR = .
 CPPFLAGS += -isystem $(GTEST_DIR)/include
 GTEST_LIBS = libgtest.a libgtest_main.a
 GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
@@ -52,9 +51,9 @@ libgtest.a : gtest-all.o
 libgtest_main.a : gtest-all.o gtest_main.o
 	$(AR) $(ARFLAGS) $@ $^
 
-dict_gtest.o : $(USER_DIR)/dict_gtest.cpp \
-                     $(USER_DIR)/dict.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/dict_gtest.cpp
+dict_gtest.o : $(GMAIN) \
+                     dict.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(GMAIN)
 
 $(TESTS) : $(GOBJ) $(GTEST_LIBS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -L$(GTEST_LIB_DIR) -lgtest_main -lpthread $^ -o $@
